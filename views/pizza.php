@@ -1,6 +1,11 @@
-<?php require_once('../config/config.php'); ?>
-<?php require_once('../controller/pizzaController.php') ?>
-<?php require_once('../partials/header.php'); ?>
+<?php
+
+require_once('../config/config.php');
+require_once('../controller/pizzaController.php');
+require_once('../partials/header.php');
+
+?>
+
 
 <main>
 <!-- le menu pour chooisir sa pizza -->
@@ -12,7 +17,7 @@
         <option value="S">S</option>
         <option value="M">M</option>
         <option value="L">L</option>
-        <OPtion value="XXXXXL">XXXXXL LA PLUS GRANDE PIZZA DU MO?NDE</OPtion>
+        <option value="XXXXXL">XXXXXL LA PLUS GRANDE PIZZA DU MONDE</option>
     </select>
     <br>
     <label for="base">Base : </label>
@@ -37,11 +42,14 @@ if (isset($_POST['size']) && isset($_POST['base']) && isset($_POST['ingredient1'
     $Commandepizza = new Pizza($_POST['size'], $_POST['base'], $_POST['ingredient1'], $_POST['ingredient2'], $_POST['ingredient3']);
     $Commandepizza->pay();
     $Commandepizza->ship();
-    echo $Commandepizza->calculatePrice(). "€";
-}
-else {
-    echo "Veuillez remplir tous les champs";
+    echo $Commandepizza->getStatus() . '<br>';
+    echo $Commandepizza->getPrice() . '<br>';
+    echo $Commandepizza->getOrderedAt() . '<br>';
+    echo $Commandepizza->getSize() . '<br>';
+    echo $Commandepizza->getBase() . '<br>';
+    echo $Commandepizza->getIngredients() . '<br>';
 }
 ?>
 </main>
 <?php require_once('../partials/footer.php'); ?>
+
