@@ -5,7 +5,7 @@
 <main>
 <!-- le menu pour chooisir sa pizza -->
 <article class="align">
-<h2>COMMANDEZ VOTRE PIZZA DES MAINTENANT(DONNEZ-NOUS VOTRE ARGENT)</h2>
+<h2>COMMANDEZ VOTRE PIZZA DES MAINTENANT</h2>
 <form method="post">
     <label for="size">Taille : </label>
     <select name="size" id="size" required>
@@ -30,6 +30,7 @@
     <button type="submit">Valider</button>
 </form>
 </article>
+
 <?php 
 
 if (isset($_POST['size']) && isset($_POST['base']) && isset($_POST['ingredient1']) && isset($_POST['ingredient2']) && isset($_POST['ingredient3'])) {

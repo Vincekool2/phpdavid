@@ -10,7 +10,10 @@ class Pizza {
     private $status;
     private $orderedAt;
 
-  // fonction pour un prix en fonction de la taille de la pizza
+//   git add .
+//   git commit -m stp
+//   git pushgit add .
+//   Cette fonction donne un prix en fonction de la taille de la pizza
     public function calculatePrice() { 
         if ($this->size === "S") {
             $price = 5;
