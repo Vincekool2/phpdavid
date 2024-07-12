@@ -25,3 +25,5 @@ foreach($orders as $order) { ?>
     <?php }
 ?>
   </main>
+
+  <?php require_once('../partials/footer.php'); ?>
