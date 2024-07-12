@@ -3,15 +3,16 @@
 <?php require_once('../partials/header.php'); ?>
 
 <main>
-
+<!-- le menu pour chooisir sa pizza -->
 <article class="align">
-<h2>Nouvelle commande de pizza</h2>
+<h2>COMMANDEZ VOTRE PIZZA DES MAINTENANT(DONNEZ-NOUS VOTRE ARGENT)</h2>
 <form method="post">
     <label for="size">Taille : </label>
     <select name="size" id="size" required>
         <option value="S">S</option>
         <option value="M">M</option>
         <option value="L">L</option>
+        <OPtion value="XXXXXL">XXXXXL LA PLUS GRANDE PIZZA DU MO?NDE</OPtion>
     </select>
     <br>
     <label for="base">Base : </label>

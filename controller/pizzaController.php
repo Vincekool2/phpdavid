@@ -10,9 +10,8 @@ class Pizza {
     private $status;
     private $orderedAt;
 
-
-    public function calculatePrice() {
-        $price = 0;
+  // fonction pour un prix en fonction de la taille de la pizza
+    public function calculatePrice() { 
         if ($this->size === "S") {
             $price = 5;
         }
@@ -22,17 +21,20 @@ class Pizza {
         if ($this->size === "L") {
             $price = 15;
         }
+        if ($this->size === "XXXXXL") {
+            $price = 350;
+        }
         return $price;
     }
-
+// on peut payé que si la pizza est "en cours de commande"
     public function pay() {
-        if ($this->status === "en cours") {
+        if ($this->status === "en cours de commande"){
             $this->status = "payé";
         }
     }
-
+// pour ne livrer que les pizza payé
     public function ship() {
-        if ($this->status === "payé") {
+        if ($this->status === "payé"){
             $this->status = "livré";
         }
     }
