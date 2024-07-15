@@ -1,6 +1,6 @@
 <?php
 
-class meal{
+class Meal{
     protected $size;
     protected $price;
     protected $base;
